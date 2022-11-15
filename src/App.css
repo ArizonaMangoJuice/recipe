@@ -1,38 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recipe-container {
+  width: 40%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 45px;
+  box-shadow: 2px 12px 13px 7px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-left {
+  /* background-color: blue; */
+  height: 100%;
+
+  width: 100%;
+  padding: 40px 0px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.recipe-number {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #4444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+
+.author {
+  font-weight: lighter;
+}
+
+.recipe-title {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0px 10px 0 0;
+  font-weight: bolder;
+}
+
+.recipe-snippet {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  font-weight: lighter;
+}
+
+.recipe-read-more {
+  text-align: end;
+  padding-right: 25px;
+  color: #444;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+  position: relative;
+}
+
+.recipe-read-more::before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 78%;
+  height: 1px;
+  background-color: #444;
+}
+
+.recipe-right {
+  height: 100%;
+  width: 100%;
+  padding: 40px 40px 40px 0px;
+  width: 40%;
+}
+
+.image-container {
+  width: 100%;
+  height: 335px;
+}
+
+.recipe-image {
+  height: 335px;
+  width: 100%;
+  object-fit: cover;
 }
