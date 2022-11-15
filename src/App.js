@@ -17,7 +17,7 @@ function App() {
     }
 
     fetchData();
-  }, [recipes]);
+  }, []);
 
   const recipeComponents = recipes.map( r => (
     <RecipeContainer
